@@ -16,12 +16,12 @@ spec:
     spec:
       containers:
         - name: hello-kubernetes
-          image: paulbouwer/hello-kubernetes:1.10.0
+          image: paulbouwer/hello-kubernetes:1.10.1
           ports:
             - containerPort: 8080
           env:
             - name: MESSAGE
-              value: "Hetzner Cloud says hello from KubeCon 2021"
+              value: "Hetzner Cloud says hello from KubeCon 2022"
             - name: KUBERNETES_NAMESPACE
               valueFrom:
                 fieldRef:

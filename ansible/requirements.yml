@@ -1,4 +1,4 @@
 ---
 collections:
   - name: hetzner.hcloud
-    version: "1.4.3"
+    version: "1.6.0"

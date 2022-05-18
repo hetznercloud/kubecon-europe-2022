@@ -1,8 +1,8 @@
-# KubeCon Europe 2021
+# KubeCon Europe 2022
 
-This repository is part of a live demo at KubeCon Europe 2021 that shows how different official integrations can be used to deploy a Kubernetes (k3s) cluster at Hetzner Cloud.
+This repository is part of a live demo at KubeCon Europe 2022 that shows how different official integrations can be used to deploy a Kubernetes (k3s) cluster at Hetzner Cloud.
 
-The code in this repository creates chargeable resources (three servers and a load balancer) in your hcloud account. Please make sure to delete the resources afterwards to avoid unintended costs. If you attended KubeCon you received a coupon for some cloud credits which you can use to cover the costs to get started.
+The code in this repository creates chargeable resources (three servers, a volume and a load balancer) in your hcloud account. Please make sure to delete the resources afterwards to avoid unintended costs. If you attended KubeCon you received a coupon for some cloud credits which you can use to cover the costs to get started.
 
 After the KubeCon this repository will not be updated or officially supported. If you think there is a bug with one of the integrations please feel free to open an issue in the corresponding GitHub repository or a customer ticket.
 
@@ -19,8 +19,8 @@ After the KubeCon this repository will not be updated or officially supported. I
 7. Clone the repository
 
 ```
-git clone https://github.com/hetznercloud/kubecon-europe-2021.git
-cd kubecon-europe-2021
+git clone https://github.com/hetznercloud/kubecon-europe-2022.git
+cd kubecon-europe-2022
 ```
 
 ### 2. Terraform

@@ -1,1 +1,1 @@
-ansible_ssh_private_key_file: "~/.ssh/kubecon"
+ansible_ssh_private_key_file: "~/.ssh/kubecon-2022"

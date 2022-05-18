@@ -2,7 +2,7 @@ terraform {
   required_providers {
     hcloud = {
       source  = "hetznercloud/hcloud"
-      version = "1.26.0"
+      version = "1.33.2"
     }
   }
 }
@@ -10,8 +10,8 @@ terraform {
 provider "hcloud" {}
 
 resource "hcloud_ssh_key" "kubecon" {
-  name       = "KubeCon 2021"
-  public_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKtQfpA5hgiFC1b3uVfC/d1qbqmly2qwHkl8BLavzTcg kubecon@europe"
+  name       = "KubeCon 2022"
+  public_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHrd/TSz+cnZXrKUSmcQw1gy6AV7OSARz9/A2N02mfui kubecon@europe"
 }
 
 resource "hcloud_network" "k3s" {
@@ -54,7 +54,7 @@ resource "hcloud_firewall" "k3s-server" {
 resource "hcloud_server" "server" {
   count       = 1
   name        = "server-${count.index}"
-  image       = "ubuntu-20.04"
+  image       = "ubuntu-22.04"
   server_type = "cx21"
   location    = "nbg1"
   ssh_keys    = [hcloud_ssh_key.kubecon.id]
@@ -68,7 +68,7 @@ resource "hcloud_server" "server" {
 resource "hcloud_server" "agent-cx21" {
   count       = 2
   name        = "agent-cx21-${count.index}"
-  image       = "ubuntu-20.04"
+  image       = "ubuntu-22.04"
   server_type = "cx21"
   location    = "nbg1"
   ssh_keys    = [hcloud_ssh_key.kubecon.id]
